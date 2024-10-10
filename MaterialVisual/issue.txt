@@ -1,0 +1,11 @@
+1. batch CRDU
+2. docker pull python:3.7.4-buster ,apt-get install libldap2-dev libsasl2-dev nginx -y, python3 -m pip install -r requirements.txt
+3. apt-get install mysql-client,crontab -e 0 2 * * * /bin/bash /root/device-manage/MaterialVisual/bakdb.sh
+4. nginx change nginx.conf user to root
+5. mysql master-slave backup,use master to do C,D,U and slave to do R
+6. large table iteration queryset(https://stackoverflow.com/questions/4222176/why-is-iterating-through-a-large-django-queryset-consuming-massive-amounts-of-me)
+7. file download function
+8. loaddata remove for deloly(python3 manage.py migrate && python3 manage.py loaddata deploy/initial.json)
+9. /usr/bin/mysqldump -u root -proot -h 10.12.120.200 -P 8084 --column-statistics=0 mvtest  > data.sql
+10. login mysql source /root/data.sql
+11. https://www.cnblogs.com/feifeifeisir/p/12870456.html

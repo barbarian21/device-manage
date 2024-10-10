@@ -1,0 +1,44 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: devman-backend-ingress
+  namespace: devman
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+spec:
+  rules:
+  - host: assets.uat.enflame.cc
+    http:
+      paths:
+      - path: /healthz/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080
+      - path: /api/v1/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080
+      - path: /api/login/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080
+      - path: /collected_static/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080
+      - path: /xadmin/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080
+      - path: /docs/
+        pathType: Prefix
+        backend:
+          serviceName: devman-backend-svc
+          servicePort: 8080

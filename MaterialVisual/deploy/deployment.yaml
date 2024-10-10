@@ -1,0 +1,152 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: paas
+    app.kubernetes.io/name: devman-bakend
+  name: devman-backend
+  namespace: devman
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type:
+      RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: paas
+      app.kubernetes.io/name: devman-backend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: paas
+        app.kubernetes.io/name: devman-backend
+    spec:
+      initContainers:
+        - image: harbor.uat.enflame.cc/library/devman-backend:develop
+          imagePullPolicy: Always
+          name: devman-backend-init
+          workingDir: /app
+          resources:
+            limits:
+              cpu: 2000m
+              memory: 2Gi
+            requests:
+              cpu: 250m
+              memory: 250Mi
+          command:
+            - sh
+            - "-c"
+          args:
+            - |
+              python3 manage.py migrate
+          volumeMounts:
+            - name: config
+              mountPath: /app/.conf
+              readOnly: true
+      containers:
+        - name: devman-backend
+          image: harbor.uat.enflame.cc/library/devman-backend:develop
+          imagePullPolicy: Always
+          workingDir: /app
+          resources:
+            limits:
+              cpu: 4000m
+              memory: 4Gi
+            requests:
+              cpu: 250m
+              memory: 250Mi
+          command:
+            - sh
+            - "-c"
+          args:
+            - |
+              uwsgi --chdir /app \
+                --http 0.0.0.0:8081 \
+                --wsgi-file MaterialVisual/wsgi.py \
+                --workers 4 \
+                --threads 2 \
+                --master \
+                --enable-threads
+          volumeMounts:
+            - name: config
+              mountPath: /app/.conf
+              readOnly: true
+          ports:
+            - containerPort: 8081
+              name: web
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz/
+              port: 8081
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /healthz/
+              port: 8081
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+        - name: devman-backend-nginx
+          image: harbor.uat.enflame.cc/library/devman-backend:develop
+          imagePullPolicy: Always
+          workingDir: /app
+          resources:
+            limits:
+              cpu: 2000m
+              memory: 2Gi
+            requests:
+              cpu: 250m
+              memory: 250Mi
+          command:
+            - sh
+            - "-c"
+          args:
+            - |
+              python3 manage.py collectstatic;
+              nginx;
+              sleep infinity;
+          volumeMounts:
+            - name: config
+              mountPath: /app/.conf
+              readOnly: true
+          ports:
+            - containerPort: 8080
+              name: nginx
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz/
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /healthz/
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        - name: config
+          configMap:
+            name: devman-backend-cm
+            items:
+              - key: config.yaml
+                path: config.yaml

@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devman-mysql
+  labels:
+    app.kubernetes.io/component: paas
+    app.kubernetes.io/name: devman-mysql
+  namespace: devman
+data:
+    MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    MYSQL_DATABASE: mvtest
+    MYSQL_USER: mvuser
+    MYSQL_PASSWORD: db@pwd666

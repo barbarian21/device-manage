@@ -1,0 +1,5012 @@
+{
+	"info": {
+		"_postman_id": "6a914e48-a3c7-4f03-a5d5-2968d2b2e332",
+		"name": "mv",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "question",
+					"item": [
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NTczMDQyLCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.Tdn8wtgjkjm4SzyMT7NIfbadpJrNONep3eUHcUiMAno",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/uaxt/442bc97b-63f6-4a7d-b6cf-f2d821abc22f/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"uaxt",
+										"442bc97b-63f6-4a7d-b6cf-f2d821abc22f",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/question/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"question",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create no files",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/question/nofiles/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"question",
+										"nofiles",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "luther.txtqet",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-f4effe25d4bdcee4c36bdc2a06740a54_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "tet",
+											"value": "dfdf",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/question/6ef7d5f0-61a6-41e1-a6ad-9ca007000660/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"question",
+										"6ef7d5f0-61a6-41e1-a6ad-9ca007000660",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "hhhh",
+											"description": "wqe",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "lsdkjfjsdkjfjksdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-101fcb861cfd01617a51247c15c4306a_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "test",
+											"value": "dfds",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/question/6ef7d5f0-61a6-41e1-a6ad-9ca007000660/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"question",
+										"6ef7d5f0-61a6-41e1-a6ad-9ca007000660",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/question/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"question",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "support",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/support/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"support",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_support\":\"2019-03-07T00:00:00.000-0300\",\n    \"customer\":\"EKhh\",\n    \"location\":\"sdkjfljdf\",\n    \"project\":\"dfadfd\",\n    \"subject\":\"dkjfakdjf\",\n    \"owner\":\"sdkjfdskfj\",\n    \"day_counts\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/support/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"support",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"date_support\":\"2019-03-07T00:00:00.000-0300\",\n    \"customer\":\"zhijiang\",\n    \"location\":\"sdkjfljdf\",\n    \"project\":\"dfadfd\",\n    \"subject\":\"哈哈哈哈\",\n    \"owner\":\"sdkjfdskfj\",\n    \"day_counts\":3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/support/41438771-27a2-4442-98db-87d91cb2c27e/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"support",
+										"41438771-27a2-4442-98db-87d91cb2c27e",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\":\"中国team\",\n    \"location\":\"sdkjfljdf\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/support/41438771-27a2-4442-98db-87d91cb2c27e/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"support",
+										"41438771-27a2-4442-98db-87d91cb2c27e",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\":\"中国team\",\n    \"location\":\"sdkjfljdf\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/questions/support/41438771-27a2-4442-98db-87d91cb2c27e/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"questions",
+										"support",
+										"41438771-27a2-4442-98db-87d91cb2c27e",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cards",
+			"item": [
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6ImNzZV90ZXN0IiwiZXhwIjoxNjM1ODY0Mjk5LCJlbWFpbCI6ImNzZV9hZG1pbkBnbWFpbC5jb20ifQ.AAcOG3YRSwHDzmAswxZZhbryAKgZ0YYyTPsOsfaOvd0",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cards/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								""
+							]
+						},
+						"description": "card list"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sn",
+									"value": "EFA1023455TT",
+									"type": "text"
+								},
+								{
+									"key": "card_type",
+									"value": "T10",
+									"type": "text"
+								},
+								{
+									"key": "card_project",
+									"value": "Leo",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "DTU",
+									"type": "text"
+								},
+								{
+									"key": "device",
+									"value": "9f64d5b8-4e48-451f-ae4e-26f15f22c36b",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "luther.wu",
+									"type": "text"
+								},
+								{
+									"key": "memory",
+									"value": "16G",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "225W",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cards/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								""
+							]
+						},
+						"description": "card list"
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sn",
+									"value": "EFA1023455U6",
+									"type": "text"
+								},
+								{
+									"key": "card_type",
+									"value": "T10",
+									"type": "text"
+								},
+								{
+									"key": "card_project",
+									"value": "Leo",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "DTU",
+									"type": "text"
+								},
+								{
+									"key": "device",
+									"value": "9f64d5b8-4e48-451f-ae4e-26f15f22c36b",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "memory",
+									"value": "16G",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "225W",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cards/c9768b41-18fa-4f2d-8cbd-2aafafa73ee3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"c9768b41-18fa-4f2d-8cbd-2aafafa73ee3",
+								""
+							]
+						},
+						"description": "card list"
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sn",
+									"value": "EFA1023455U6",
+									"type": "text"
+								},
+								{
+									"key": "card_type",
+									"value": "T10",
+									"type": "text"
+								},
+								{
+									"key": "card_project",
+									"value": "Leo",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "DTU",
+									"type": "text"
+								},
+								{
+									"key": "device",
+									"value": "9f64d5b8-4e48-451f-ae4e-26f15f22c36b",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "memory",
+									"value": "16G",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "225W",
+									"type": "text"
+								},
+								{
+									"key": "remark",
+									"value": "板卡损坏",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cards/c9768b41-18fa-4f2d-8cbd-2aafafa73ee3/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"c9768b41-18fa-4f2d-8cbd-2aafafa73ee3",
+								""
+							]
+						},
+						"description": "card list"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sn",
+									"value": "EFA1023455U6",
+									"type": "text"
+								},
+								{
+									"key": "card_type",
+									"value": "T10",
+									"type": "text"
+								},
+								{
+									"key": "card_project",
+									"value": "Leo",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "DTU",
+									"type": "text"
+								},
+								{
+									"key": "device",
+									"value": "9f64d5b8-4e48-451f-ae4e-26f15f22c36b",
+									"type": "text"
+								},
+								{
+									"key": "owner",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "memory",
+									"value": "16G",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "225W",
+									"type": "text"
+								},
+								{
+									"key": "remark",
+									"value": "板卡损坏",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/cards/1776a0b2-f26e-4b6d-98c7-d9de5d394819/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"1776a0b2-f26e-4b6d-98c7-d9de5d394819",
+								""
+							]
+						},
+						"description": "card list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devices",
+			"item": [
+				{
+					"name": "configs",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/config/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"config",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model",
+											"value": "浪潮NF5684M",
+											"type": "text"
+										},
+										{
+											"key": "verder",
+											"value": "Inspure",
+											"type": "text"
+										},
+										{
+											"key": "cpu",
+											"value": "6230",
+											"type": "text"
+										},
+										{
+											"key": "memory",
+											"value": "348G",
+											"type": "text"
+										},
+										{
+											"key": "mainboard",
+											"value": "insprue",
+											"type": "text"
+										},
+										{
+											"key": "harddisk",
+											"value": "4TNvme 2T SSD",
+											"type": "text"
+										},
+										{
+											"key": "power",
+											"value": "2000W",
+											"type": "text"
+										},
+										{
+											"key": "network",
+											"value": "10G光口*1 1G电口*2",
+											"type": "text"
+										},
+										{
+											"key": "osconfig",
+											"value": "{\"os_name\":\"ubuntu16.04\",\"kernel\":\"Linxu 134llsdf\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/config/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"config",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model",
+											"value": "浪潮NF5684M",
+											"type": "text"
+										},
+										{
+											"key": "vender",
+											"value": "Inspure",
+											"type": "text"
+										},
+										{
+											"key": "cpu",
+											"value": "6230",
+											"type": "text"
+										},
+										{
+											"key": "memory",
+											"value": "348G",
+											"type": "text"
+										},
+										{
+											"key": "mainboard",
+											"value": "insprue",
+											"type": "text"
+										},
+										{
+											"key": "harddisk",
+											"value": "4TNvme 2T SSD",
+											"type": "text"
+										},
+										{
+											"key": "power",
+											"value": "2000W",
+											"type": "text"
+										},
+										{
+											"key": "network",
+											"value": "10G光口*1 1G电口*2",
+											"type": "text"
+										},
+										{
+											"key": "osconfig",
+											"value": "{\"os_name\":\"ubuntu16.04\",\"kernel\":\"Linxu 134llsdf\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "节奏",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/config/7d31dd66-13d4-434c-91fa-800a6b1dd7a4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"config",
+										"7d31dd66-13d4-434c-91fa-800a6b1dd7a4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model",
+											"value": "H3C 4290",
+											"type": "text"
+										},
+										{
+											"key": "vender",
+											"value": "Inspure",
+											"type": "text"
+										},
+										{
+											"key": "cpu",
+											"value": "6230",
+											"type": "text"
+										},
+										{
+											"key": "memory",
+											"value": "348G",
+											"type": "text"
+										},
+										{
+											"key": "mainboard",
+											"value": "insprue",
+											"type": "text"
+										},
+										{
+											"key": "harddisk",
+											"value": "4TNvme 2T SSD",
+											"type": "text"
+										},
+										{
+											"key": "power",
+											"value": "2000W",
+											"type": "text"
+										},
+										{
+											"key": "network",
+											"value": "10G光口*1 1G电口*2",
+											"type": "text"
+										},
+										{
+											"key": "osconfig",
+											"value": "{\"os_name\":\"ubuntu16.04\",\"kernel\":\"Linxu 134llsdf\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "节奏",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/config/da1d802d-54f5-487e-885f-1574cf72a2af/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"config",
+										"da1d802d-54f5-487e-885f-1574cf72a2af",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model",
+											"value": "H3C 4290",
+											"type": "text"
+										},
+										{
+											"key": "vender",
+											"value": "Inspure",
+											"type": "text"
+										},
+										{
+											"key": "cpu",
+											"value": "6230",
+											"type": "text"
+										},
+										{
+											"key": "memory",
+											"value": "348G",
+											"type": "text"
+										},
+										{
+											"key": "mainboard",
+											"value": "insprue",
+											"type": "text"
+										},
+										{
+											"key": "harddisk",
+											"value": "4TNvme 2T SSD",
+											"type": "text"
+										},
+										{
+											"key": "power",
+											"value": "2000W",
+											"type": "text"
+										},
+										{
+											"key": "network",
+											"value": "10G光口*1 1G电口*2",
+											"type": "text"
+										},
+										{
+											"key": "osconfig",
+											"value": "{\"os_name\":\"ubuntu16.04\",\"kernel\":\"Linxu 134llsdf\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "节奏",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/config/da731490-a7f4-4cca-99d6-adc51a063f0b/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"config",
+										"da731490-a7f4-4cca-99d6-adc51a063f0b",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "locations",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/location/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"location",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "info",
+											"value": "一个位置",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "{\"lab_loc\":\"CSE-JQ\",\"rack_num\":\"Rack02\",\"u_num\":\"2u-6u\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/location/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"location",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "info",
+											"value": "一个位置",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "{\"lab_loc\":\"CSE-JQ\",\"rack_num\":\"Rack02\",\"u_num\":\"2u-8u\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "混合",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/location/b783d410-a5ba-4a1b-acf3-f9d070ebdcce/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"location",
+										"b783d410-a5ba-4a1b-acf3-f9d070ebdcce",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "info",
+											"value": "就是个patch",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "{\"lab_loc\":\"CSE-JQ\",\"rack_num\":\"Rack02\",\"u_num\":\"2u-8u\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "混合",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/location/b783d410-a5ba-4a1b-acf3-f9d070ebdcce/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"location",
+										"b783d410-a5ba-4a1b-acf3-f9d070ebdcce",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "info",
+											"value": "就是个patch",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "{\"lab_loc\":\"CSE-JQ\",\"rack_num\":\"Rack02\",\"u_num\":\"2u-8u\"}",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "混合",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/location/b783d410-a5ba-4a1b-acf3-f9d070ebdcce/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"location",
+										"b783d410-a5ba-4a1b-acf3-f9d070ebdcce",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "devices",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/device/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"device",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cse_jq_inspure_01",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "locate",
+											"value": "49d67c38-e0da-45d5-9e82-6a666bdafdd3",
+											"type": "text"
+										},
+										{
+											"key": "sn",
+											"value": "167890",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "SH7890",
+											"type": "text"
+										},
+										{
+											"key": "hostname",
+											"value": "enflame-cse-01",
+											"type": "text"
+										},
+										{
+											"key": "ip",
+											"value": "10.10.10.10",
+											"type": "text"
+										},
+										{
+											"key": "account",
+											"value": "admin/admin01",
+											"type": "text"
+										},
+										{
+											"key": "bmc",
+											"value": "10.11.11.11",
+											"type": "text"
+										},
+										{
+											"key": "bmc_account",
+											"value": "test/test021",
+											"type": "text"
+										},
+										{
+											"key": "config",
+											"value": "7d31dd66-13d4-434c-91fa-800a6b1dd7a4",
+											"type": "text"
+										},
+										{
+											"key": "is_cse",
+											"value": "False",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/device/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"device",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cse_jq_inspure_01",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "locate",
+											"value": "49d67c38-e0da-45d5-9e82-6a666bdafdd3",
+											"type": "text"
+										},
+										{
+											"key": "sn",
+											"value": "167890",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "SH7890",
+											"type": "text"
+										},
+										{
+											"key": "hostname",
+											"value": "enflame-cse-01",
+											"type": "text"
+										},
+										{
+											"key": "ip",
+											"value": "10.10.10.10",
+											"type": "text"
+										},
+										{
+											"key": "account",
+											"value": "admin/admin01",
+											"type": "text"
+										},
+										{
+											"key": "bmc",
+											"value": "10.11.11.11",
+											"type": "text"
+										},
+										{
+											"key": "bmc_account",
+											"value": "test/test021",
+											"type": "text"
+										},
+										{
+											"key": "config",
+											"value": "7d31dd66-13d4-434c-91fa-800a6b1dd7a4",
+											"type": "text"
+										},
+										{
+											"key": "is_cse",
+											"value": "False",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/device/f0483a28-edbf-4ec9-8cc2-1edc348fbd79/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"device",
+										"f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cse_jq_inspure_01",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "locate",
+											"value": "49d67c38-e0da-45d5-9e82-6a666bdafdd3",
+											"type": "text"
+										},
+										{
+											"key": "sn",
+											"value": "167890",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "SH7890",
+											"type": "text"
+										},
+										{
+											"key": "hostname",
+											"value": "enflame-cse-01",
+											"type": "text"
+										},
+										{
+											"key": "ip",
+											"value": "10.10.10.10",
+											"type": "text"
+										},
+										{
+											"key": "account",
+											"value": "admin/admin01",
+											"type": "text"
+										},
+										{
+											"key": "bmc",
+											"value": "10.11.11.11",
+											"type": "text"
+										},
+										{
+											"key": "bmc_account",
+											"value": "test/test021",
+											"type": "text"
+										},
+										{
+											"key": "config",
+											"value": "7d31dd66-13d4-434c-91fa-800a6b1dd7a4",
+											"type": "text"
+										},
+										{
+											"key": "is_cse",
+											"value": "False",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "不可使用",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/device/f0483a28-edbf-4ec9-8cc2-1edc348fbd79/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"device",
+										"f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cse_jq_inspure_01",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "locate",
+											"value": "49d67c38-e0da-45d5-9e82-6a666bdafdd3",
+											"type": "text"
+										},
+										{
+											"key": "sn",
+											"value": "167890",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "SH7890",
+											"type": "text"
+										},
+										{
+											"key": "hostname",
+											"value": "enflame-cse-01",
+											"type": "text"
+										},
+										{
+											"key": "ip",
+											"value": "10.10.10.10",
+											"type": "text"
+										},
+										{
+											"key": "account",
+											"value": "admin/admin01",
+											"type": "text"
+										},
+										{
+											"key": "bmc",
+											"value": "10.11.11.11",
+											"type": "text"
+										},
+										{
+											"key": "bmc_account",
+											"value": "test/test021",
+											"type": "text"
+										},
+										{
+											"key": "config",
+											"value": "7d31dd66-13d4-434c-91fa-800a6b1dd7a4",
+											"type": "text"
+										},
+										{
+											"key": "is_cse",
+											"value": "False",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "不可使用",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/device/5b1debfb-f503-4cff-a8d6-e796f39cfd67/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"device",
+										"5b1debfb-f503-4cff-a8d6-e796f39cfd67",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "borrows",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/borrow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"borrow",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device",
+											"value": "f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "testser",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/borrow/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"borrow",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device",
+											"value": "f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "testser",
+											"type": "text"
+										},
+										{
+											"key": "time_borrowed",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "time_end",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/borrow/d05cc894-fec2-42eb-be12-c89d09a54152/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"borrow",
+										"d05cc894-fec2-42eb-be12-c89d09a54152",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device",
+											"value": "f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "i don't konw",
+											"type": "text"
+										},
+										{
+											"key": "time_borrowed",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "time_end",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/borrow/d05cc894-fec2-42eb-be12-c89d09a54152/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"borrow",
+										"d05cc894-fec2-42eb-be12-c89d09a54152",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device",
+											"value": "f0483a28-edbf-4ec9-8cc2-1edc348fbd79",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "i don't konw",
+											"type": "text"
+										},
+										{
+											"key": "time_borrowed",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "time_end",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/devices/borrow/d05cc894-fec2-42eb-be12-c89d09a54152/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"devices",
+										"borrow",
+										"d05cc894-fec2-42eb-be12-c89d09a54152",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NDU5ODU4LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.HpE3ub7dKzkD2JVmuWCMrPImN-ok_QfUk8JTPtXnErg",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/login/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "luther.wu",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wjq@4321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						},
+						"description": "login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "materials",
+			"item": [
+				{
+					"name": "use",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/use/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"use",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘sdgdsag",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/use/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"use",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/use/a484145f-e240-4a24-a009-430d74543d05/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"use",
+										"a484145f-e240-4a24-a009-430d74543d05",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\",\"sp.mengmeng.li\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/use/a484145f-e240-4a24-a009-430d74543d05/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"use",
+										"a484145f-e240-4a24-a009-430d74543d05",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\",\"sp.mengmeng.li\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/use/6fe80782-205d-4f4f-a236-78fb9588b36b/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"use",
+										"6fe80782-205d-4f4f-a236-78fb9588b36b",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "purchase",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘sdgdsag",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luthe.wu",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "testsete",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/4528ee5c-92fe-4355-b1d2-7cf44042f6f4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										"4528ee5c-92fe-4355-b1d2-7cf44042f6f4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luthe.wu",
+											"type": "text"
+										},
+										{
+											"key": "reason",
+											"value": "testsete",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/4528ee5c-92fe-4355-b1d2-7cf44042f6f4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										"4528ee5c-92fe-4355-b1d2-7cf44042f6f4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\",\"sp.mengmeng.li\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/6fe80782-205d-4f4f-a236-78fb9588b36b/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										"6fe80782-205d-4f4f-a236-78fb9588b36b",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "budget",
+					"item": [
+						{
+							"name": "list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/budget/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"budget",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "dept",
+											"value": "CSE",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2021",
+											"type": "text"
+										},
+										{
+											"key": "source",
+											"value": "sldkjfsd",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "project",
+											"value": "leo",
+											"type": "text"
+										},
+										{
+											"key": "budget_body",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "budget_num",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "type_one",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "type_two",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_dept",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tax",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "total",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/budget/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"budget",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "dept",
+											"value": "CSE",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2021",
+											"type": "text"
+										},
+										{
+											"key": "source",
+											"value": "sldkjfsd",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "project",
+											"value": "leo",
+											"type": "text"
+										},
+										{
+											"key": "budget_body",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "budget_num",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "type_one",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "type_two",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_dept",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tax",
+											"value": "22222",
+											"type": "text"
+										},
+										{
+											"key": "total",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/budget/0e418f84-0816-4eb6-804e-928d29168756/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"budget",
+										"0e418f84-0816-4eb6-804e-928d29168756",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "dept",
+											"value": "CSE",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2021",
+											"type": "text"
+										},
+										{
+											"key": "source",
+											"value": "sldkjfsd",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "project",
+											"value": "leo",
+											"type": "text"
+										},
+										{
+											"key": "budget_body",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "budget_num",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "type_one",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "type_two",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_dept",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tax",
+											"value": "22222",
+											"type": "text"
+										},
+										{
+											"key": "total",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/budget/0e418f84-0816-4eb6-804e-928d29168756/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"budget",
+										"0e418f84-0816-4eb6-804e-928d29168756",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "quarter",
+											"value": "Q1",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "https://www.jd.com/test/etstet/",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "键盘dfdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "罗技键盘",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "users",
+											"value": "{\"names\":[\"luther.wu\",\"sp.mengmeng.li\"]}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/materials/purchase/6fe80782-205d-4f4f-a236-78fb9588b36b/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"materials",
+										"purchase",
+										"6fe80782-205d-4f4f-a236-78fb9588b36b",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "modelzoo",
+			"item": [
+				{
+					"name": "release",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/release/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"release",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "version",
+											"value": "sdfksdf",
+											"type": "text"
+										},
+										{
+											"key": "url",
+											"value": "http://www.baidu.com/",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "sdfadsf",
+											"type": "text"
+										},
+										{
+											"key": "other",
+											"value": "{\"test\":\"test\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/release/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"release",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "version",
+											"value": "sdfasdf",
+											"type": "text"
+										},
+										{
+											"key": "url",
+											"value": "http://www.baidu.com/",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "sdfadsfsdfsdfsd",
+											"type": "text"
+										},
+										{
+											"key": "other",
+											"value": "{\"test\":\"test\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/release/e852198e-fa55-483f-ac87-98012cb405ef/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"release",
+										"e852198e-fa55-483f-ac87-98012cb405ef",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "version",
+											"value": "sdfdsf",
+											"type": "text"
+										},
+										{
+											"key": "url",
+											"value": "http://www.baidu.com/",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "sdfadsfsdfsdfsd",
+											"type": "text"
+										},
+										{
+											"key": "other",
+											"value": "{\"test\":\"test\",\"test1\":\"hh\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/release/e852198e-fa55-483f-ac87-98012cb405ef/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"release",
+										"e852198e-fa55-483f-ac87-98012cb405ef",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "version",
+											"value": "sdfdsf",
+											"type": "text"
+										},
+										{
+											"key": "url",
+											"value": "http://www.baidu.com/",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "sdfadsfsdfsdfsd",
+											"type": "text"
+										},
+										{
+											"key": "other",
+											"value": "{\"test\":\"test\",\"test1\":\"hh\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/release/e852198e-fa55-483f-ac87-98012cb405ef/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"release",
+										"e852198e-fa55-483f-ac87-98012cb405ef",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "report",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create no files",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "test-123456",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/nofiles/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										"nofiles",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NTczMDQyLCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.Tdn8wtgjkjm4SzyMT7NIfbadpJrNONep3eUHcUiMAno",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/dce83cd7-302a-4e2a-914a-8e29d1269b10/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										"dce83cd7-302a-4e2a-914a-8e29d1269b10",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "luther.txtqet",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "sdtwerew",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-f4effe25d4bdcee4c36bdc2a06740a54_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "tet",
+											"value": "dfdf",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/dce83cd7-302a-4e2a-914a-8e29d1269b10/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										"dce83cd7-302a-4e2a-914a-8e29d1269b10",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/1.jpeg"
+										},
+										{
+											"key": "title",
+											"value": "hhhh",
+											"description": "wqe",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "version",
+											"value": "lsdkjfjsdkjfjksdf",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "sdwerwe",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-8ac747d0c946457240badd39321bb3db_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-101fcb861cfd01617a51247c15c4306a_hd.jpg",
+											"disabled": true
+										},
+										{
+											"key": "test",
+											"value": "dfds",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/modelzoo/report/383a68bd-fc45-4971-b4ed-66c0599af952/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"modelzoo",
+										"report",
+										"383a68bd-fc45-4971-b4ed-66c0599af952",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "labsmanage",
+			"item": [
+				{
+					"name": "request",
+					"item": [
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "a device test",
+											"type": "text"
+										},
+										{
+											"key": "request",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "handler",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/request/a0981280-55d4-43dc-b7a2-e2e1b7223365/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"request",
+										"a0981280-55d4-43dc-b7a2-e2e1b7223365",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/request/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"request",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "a device test",
+											"type": "text"
+										},
+										{
+											"key": "request",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "handler",
+											"value": "cse",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/request/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"request",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "a device test",
+											"type": "text"
+										},
+										{
+											"key": "request",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "handler",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "device destory",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/request/a0981280-55d4-43dc-b7a2-e2e1b7223365/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"request",
+										"a0981280-55d4-43dc-b7a2-e2e1b7223365",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "a device test",
+											"type": "text"
+										},
+										{
+											"key": "request",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "handler",
+											"value": "luther.wu",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "remark",
+											"value": "device destory",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/request/a0981280-55d4-43dc-b7a2-e2e1b7223365/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"request",
+										"a0981280-55d4-43dc-b7a2-e2e1b7223365",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "labcloud",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/labcloud/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"labcloud",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "software",
+											"value": "a device ",
+											"type": "text"
+										},
+										{
+											"key": "device",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "bussiness",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_days",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/labcloud/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"labcloud",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patch",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "software",
+											"value": "a device ",
+											"type": "text"
+										},
+										{
+											"key": "device",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "bussiness",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_days",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "customer",
+											"value": "{\"use\":\"test\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/labcloud/363f5ea3-8c78-4efa-8b7d-a702d968ee18/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"labcloud",
+										"363f5ea3-8c78-4efa-8b7d-a702d968ee18",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "software",
+											"value": "a device ",
+											"type": "text"
+										},
+										{
+											"key": "device",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "bussiness",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_days",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "use_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "customer",
+											"value": "{\"use\":\"heh\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/labcloud/053573b0-1913-4d92-8f54-cbba188eab13/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"labcloud",
+										"053573b0-1913-4d92-8f54-cbba188eab13",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "software",
+											"value": "a device ",
+											"type": "text"
+										},
+										{
+											"key": "device",
+											"value": "a card device request",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "bussiness",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "result",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "use_days",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "use_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2019-03-07T00:00:00.000-0300",
+											"type": "text"
+										},
+										{
+											"key": "customer",
+											"value": "{\"use\":\"heh\"}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/labsmanage/labcloud/053573b0-1913-4d92-8f54-cbba188eab13/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"labsmanage",
+										"labcloud",
+										"053573b0-1913-4d92-8f54-cbba188eab13",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/blog/posts/4/",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "gggg",
+							"type": "text"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/luther/Documents/PEGA/Bye/picture/v2-f8a774e53906d6b1c7babb8afcb87998_hd.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/blog/posts/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"blog",
+						"posts",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/api/v1/blog/posts/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/v1/blog/posts/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"blog",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Imx1dGhlci53dSIsImV4cCI6MTYzNzg0NTA0OSwiZW1haWwiOiJsdXRoZXIud3VAZW5mbGFtZS10ZWNoLmNvbSJ9.oJa5hLBActJaY_qOK0e5VTmO2FtsCkrHdZD0fpGRai0",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNjM3NTcyNTc3LCJlbWFpbCI6ImFkbWluQHRlc3QuMTIzIn0.2qZylF7rthAAA4OR-Lv_1TN_24RXKYx1SFUCZ-h97D4"
+		}
+	]
+}

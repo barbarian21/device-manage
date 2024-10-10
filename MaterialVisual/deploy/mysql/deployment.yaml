@@ -1,0 +1,89 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: paas
+    app.kubernetes.io/name: devman-mysql
+  name: devman-mysql
+  namespace: devman
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  strategy:
+    type:
+      Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: paas
+      app.kubernetes.io/name: devman-mysql
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: paas
+        app.kubernetes.io/name: devman-mysql
+    spec:
+      containers:
+        - image: harbor.uat.enflame.cc/library/mysql:5.7
+          imagePullPolicy: Always
+          name: mysql
+          args:
+            - "--character-set-server=utf8mb4"
+            - "--collation-server=utf8mb4_unicode_ci"
+            - "--max-connections=10000"
+          resources:
+            limits:
+              cpu: 4000m
+              memory: 8Gi
+            requests:
+              cpu: 250m
+              memory: 250Mi
+          ports:
+            - containerPort: 3306
+              name: mysql
+              protocol: TCP
+          volumeMounts:
+            - name: devman-mysql-pvc
+              mountPath: /var/lib/mysql
+          env:
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: devman-mysql
+                  key: MYSQL_DATABASE
+            - name: MYSQL_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: devman-mysql
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: devman-mysql
+                  key: MYSQL_PASSWORD
+            - name: MYSQL_RANDOM_ROOT_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: devman-mysql
+                  key: MYSQL_RANDOM_ROOT_PASSWORD
+          livenessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            tcpSocket:
+              port: 3306
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        - name: devman-mysql-pvc
+          persistentVolumeClaim:
+            claimName: devman-mysql-pvc
+            readOnly: false

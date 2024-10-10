@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/component: paas
+    app.kubernetes.io/name: devman-web
+  name: devman-web
+  namespace: devman
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type:
+      RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: paas
+      app.kubernetes.io/name: devman-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: paas
+        app.kubernetes.io/name: devman-web
+    spec:
+      containers:
+        - name: devman-web
+          image: harbor.uat.enflame.cc/library/enflame.cn/devman-web:develop
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: 2000m
+              memory: 2Gi
+            requests:
+              cpu: 250m
+              memory: 250Mi
+          ports:
+            - containerPort: 80
+              name: nginx
+              protocol: TCP
